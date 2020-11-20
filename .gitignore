@@ -103,6 +103,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+covid-daily/
+CovidStatSuborchestrator/
 
 # Spyder project settings
 .spyderproject
