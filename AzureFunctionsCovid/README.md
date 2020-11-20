@@ -13,3 +13,21 @@ Follow these [steps](https://docs.microsoft.com/en-us/azure/azure-functions/crea
 
 Follow these [extended steps](https://docs.microsoft.com/en-us/azure/azure-functions/durable/quickstart-python-vscode#install-azure-functions-durable-from-pypi) for installation of durable functions libraries for python.
 
+Create a `local.setting.json` file and enter the following:
+``` json
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "<your azure storage key>",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobs.covid-daily.Disabled": "true",
+    "AzureWebJobs.CovidStatSuborchestrator.Disabled": "true"
+  }
+}
+
+```
+
+Finally, run the following command to execute the functions:
+```
+func host start
+```
