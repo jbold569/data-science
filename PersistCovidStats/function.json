@@ -1,0 +1,18 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "row",
+      "type": "activityTrigger",
+      "direction": "in"
+    },
+    { 
+      "name": "$return",
+      "direction": "out",
+      "type": "table",
+      "tableName": "covidstats",
+      "partitionKey": "covid",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}
